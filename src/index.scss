@@ -1,0 +1,123 @@
+.lock {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 14px;
+  input {
+    width: 16px;
+    height: 16px;
+  }
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 375px;
+  height: 320px;
+  margin-bottom: 12px;
+  >div {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #000;
+
+    .dz {
+      position: absolute;
+      z-index: 999;
+      font-size: 12px;
+      right: 4px;
+      bottom: 2px;
+    }
+    .baseName {
+      position: absolute;
+      width: 78px;
+      height: 18px;
+      right: 0;
+      bottom: 0;
+      text-align: center;
+      border: none;
+      transform: scale(.8);
+      span {
+        font-size: 12px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .base:hover {
+    background-color: #eee;
+    cursor: pointer;
+  }
+  .active {
+    background-color: #eee;
+  }
+  .no-b {
+    border-bottom: 0px solid transparent;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+  }
+  .no-r {
+    border-right: 0px solid transparent;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+  }
+  .no-b-r {
+    border-right: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+  }
+  .no-b-l {
+    border-left: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+  }
+  .no-b-l-r {
+    border-left: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-top: 1px solid #000;
+    border-right: 1px solid transparent;
+  }
+  .no-b-r-t {
+    border-right: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-top: 1px solid transparent;
+    border-left: 1px solid #000;
+  }
+  .no-b-r-t-l {
+    border-right: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+  }
+  .star-box {
+    .main-star {
+      margin-top: 4px;
+      writing-mode: vertical-lr;
+      font-size: 12px;
+    }
+    
+    .main-star:nth-child(1) {
+      color: rgba(221, 4, 4, 0.542);
+    }
+    
+    .main-star:nth-child(2) {
+      color: rgb(4, 14, 103);
+    }
+    .status-box {
+      position: relative;
+      left: -14px;
+      top: -4px;
+      height: 22px;
+      border: none;
+      font-size: 12px;
+      transform: scale(.6);
+
+      span:nth-child(1) {
+        margin-right: 10px;
+      }
+    }
+  }
+}
