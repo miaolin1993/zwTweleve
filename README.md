@@ -1,37 +1,62 @@
-# react-twelve
+# @miaolin777/react-zw-twelve
 
-一个用于紫微斗数十二宫计算的 React 组件。
+一个用于展示紫微斗数命盘的 React 组件库。
 
 ## 安装
 
 ```bash
-npm install react-twelve
+npm install @miaolin777/react-zw-twelve
 # 或
-yarn add react-twelve
+yarn add @miaolin777/react-zw-twelve
+# 或
+pnpm add @miaolin777/react-zw-twelve
 ```
 
 ## 使用
 
 ```jsx
-import React from 'react';
-import Twelve from 'react-twelve';
+import { Twelve } from '@miaolin777/react-zw-twelve';
+import '@miaolin777/react-zw-twelve/dist/index.css'; // 导入样式
 
 function App() {
   return (
-    <div>
-      <Twelve />
+    <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto' }}>
+      <Twelve watermark="自定义水印" />
     </div>
   );
 }
-
-export default App;
 ```
 
-## 依赖要求
+## 属性
 
-- React >= 16.8.0
-- React DOM >= 16.8.0
-- Ant Design >= 5.0.0
+| 属性名 | 类型 | 默认值 | 说明 |
+|--------|------|--------|------|
+| watermark | string | "东派紫微-林学风 制作" | 水印文字 |
 
-## example文件夹
-可以直接测试组件效果
+## 特性
+
+- 响应式布局，自适应不同屏幕尺寸
+- 支持锁定紫微位置
+- 展示格局说明
+- 支持自定义水印
+- 使用 TypeScript 开发，提供完整类型定义
+
+## 开发
+
+```bash
+# 安装依赖
+pnpm install
+
+# 启动开发服务器
+pnpm dev
+
+# 构建
+pnpm build
+
+# 预览
+pnpm preview
+```
+
+## 许可证
+
+MIT License

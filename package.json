@@ -1,5 +1,5 @@
 {
-  "name": "react-twelve",
+  "name": "@miaolin777/react-zw-twelve",
   "version": "1.0.0",
   "description": "A React component for Twelve Palaces calculation",
   "main": "dist/index.js",
@@ -17,11 +17,22 @@
   "keywords": [
     "react",
     "twelve",
-    "紫微",
-    "命盘"
+    "紫微斗数十二基础盘",
+    "react-component"
   ],
   "author": "林学风",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miaolin777/react-zw-twelve"
+  },
+  "bugs": {
+    "url": "https://github.com/miaolin777/react-zw-twelve/issues"
+  },
+  "homepage": "https://github.com/miaolin777/react-zw-twelve#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "antd": ">=5.0.0",
     "react": ">=16.8.0",
@@ -42,5 +53,8 @@
     "tslib": "^2.8.1",
     "typescript": "^4.6.3",
     "vite": "^5.1.4"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^6.0.0"
   }
 }
