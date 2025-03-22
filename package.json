@@ -24,12 +24,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/miaolin777/react-zw-twelve"
+    "url": "git+https://github.com/miaolin1993/zwTweleve.git"
   },
   "bugs": {
-    "url": "https://github.com/miaolin777/react-zw-twelve/issues"
+    "url": "https://github.com/miaolin1993/zwTweleve/issues"
   },
-  "homepage": "https://github.com/miaolin777/react-zw-twelve#readme",
+  "homepage": "https://github.com/miaolin1993/zwTweleve#readme",
   "publishConfig": {
     "access": "public"
   },
