@@ -11,14 +11,10 @@
   "scripts": {
     "build": "rollup -c",
     "prepare": "npm run build",
-    "dev": "vite",
-    "preview": "vite preview"
+    "dev": "vite"
   },
   "keywords": [
-    "react",
-    "twelve",
-    "紫微斗数十二基础盘",
-    "react-component"
+    "紫微斗数十二基础盘"
   ],
   "author": "林学风",
   "license": "MIT",
