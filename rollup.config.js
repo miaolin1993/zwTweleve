@@ -12,29 +12,40 @@ export default {
       file: 'dist/index.js',
       format: 'cjs',
       sourcemap: true,
+      exports: 'named'
     },
     {
       file: 'dist/index.esm.js',
       format: 'esm',
       sourcemap: true,
-    },
+      exports: 'named'
+    }
   ],
   plugins: [
     peerDepsExternal(),
     resolve(),
     commonjs(),
-    typescript({ tsconfig: './tsconfig.json' }),
+    typescript({ 
+      tsconfig: './tsconfig.json',
+      declaration: true,
+      declarationDir: 'dist',
+      sourceMap: true
+    }),
     postcss({
       extensions: ['.css', '.scss'],
-      use: ['sass'],
-      extract: true,
-      modules: false,
-      minimize: true,
-      inject: false,
-      config: {
-        path: './postcss.config.js',
+      use: {
+        sass: {
+          implementation: sass,
+          sassOptions: {
+            outputStyle: 'compressed'
+          }
+        }
       },
-    }),
+      extract: 'index.css',
+      minimize: true,
+      modules: false,
+      inject: false
+    })
   ],
-  external: ['react', 'react-dom', 'antd'],
+  external: ['react', 'react-dom', 'antd']
 }; 
