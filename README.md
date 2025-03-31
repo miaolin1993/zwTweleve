@@ -16,27 +16,25 @@ yarn add @miaolin777/react-zw-twelve
 pnpm add @miaolin777/react-zw-twelve
 ```
 
-## 使用
+## 使用方法
 
-```jsx
-import { Twelve } from "@miaolin777/react-zw-twelve"
+```tsx
+import { Twelve } from 'react-zw-twelve';
 
-<Twelve />
+function App() {
+  return (
+    <Twelve watermark="" />
+  );
+}
 ```
 
-## 本地预览组件效果
-
 ```bash
-# 安装依赖
 pnpm install
 
-# 启动开发服务器预览
-pnpm dev
+pnpm run dev
 
-# 构建
 pnpm build
 ```
 
 ## 许可证
-
 MIT License

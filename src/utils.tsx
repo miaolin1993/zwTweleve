@@ -66,7 +66,7 @@ export const getMainList = (num: number): IMainList[] => {
       title: '申',
     },
     {
-      class: `no-b base ${num === 4 ? 'active' : ''}`,
+      class: `no-b-r base ${num === 4 ? 'active' : ''}`,
       mainList: [],
       statusList: [],
       baseName: '',
@@ -74,7 +74,7 @@ export const getMainList = (num: number): IMainList[] => {
       title: '辰',
     },
     {
-      class: 'no-b-l-r',
+      class: 'no-b-r',
       mainList: [],
       statusList: [],
       baseName: '',
@@ -82,7 +82,7 @@ export const getMainList = (num: number): IMainList[] => {
       title: '',
     },
     {
-      class: 'no-b-l',
+      class: 'no-b-l-r',
       mainList: [],
       statusList: [],
       index: 30,
@@ -90,7 +90,7 @@ export const getMainList = (num: number): IMainList[] => {
       title: '',
     },
     {
-      class: `no-b-l base ${num === 9 ? 'active' : ''}`,
+      class: `no-b base ${num === 9 ? 'active' : ''}`,
       mainList: [],
       index: 9,
       statusList: [],

@@ -2,19 +2,24 @@ import React, { useState, useEffect } from 'react';
 import { Layout, Menu, theme, Button } from 'antd';
 import type { MenuProps } from 'antd';
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
-import { Twelve } from '../src';
+import Twelve from '../src/components/Twelve';
 
 const { Content, Sider } = Layout;
 
 const items: MenuProps['items'] = [
   {
-    key: 'twelve-palaces',
-    label: 'Twelve Palaces',
+    key: 'mobile',
+    label: '移动端组件',
+  },
+  {
+    key: 'desktop',
+    label: 'PC端组件',
   },
 ];
 
 export const App: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const [currentView, setCurrentView] = useState<'mobile' | 'desktop'>('mobile');
   const [isMobile, setIsMobile] = useState(false);
   const {
     token: { colorBgContainer, borderRadiusLG },
@@ -33,6 +38,14 @@ export const App: React.FC = () => {
     };
   }, []);
 
+  const renderContent = () => {
+    return (
+      <div>
+        <Twelve watermark="东派紫微-林学风 制作" />
+      </div>
+    );
+  };
+
   if (isMobile) {
     return (
       <Layout style={{ minHeight: '100vh' }}>
@@ -44,7 +57,7 @@ export const App: React.FC = () => {
             borderRadius: borderRadiusLG,
           }}
         >
-          <Twelve />
+          {renderContent()}
         </Content>
       </Layout>
     );
@@ -71,9 +84,10 @@ export const App: React.FC = () => {
           }}>
             <Menu
               mode="inline"
-              defaultSelectedKeys={['twelve-palaces']}
+              defaultSelectedKeys={['mobile']}
               style={{ height: '100%', borderRight: 0 }}
               items={items}
+              onClick={({ key }) => setCurrentView(key as 'mobile' | 'desktop')}
             />
           </div>
           <Button
@@ -106,7 +120,7 @@ export const App: React.FC = () => {
               borderRadius: borderRadiusLG,
             }}
           >
-            <Twelve />
+            {renderContent()}
           </Content>
         </Layout>
       </Layout>

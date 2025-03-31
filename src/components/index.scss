@@ -7,7 +7,12 @@
     width: 16px;
     height: 16px;
   }
+
+  .title {
+    margin-right: 4px;
+  }
 }
+
 .main {
   display: flex;
   flex-wrap: wrap;
@@ -117,6 +122,48 @@
 
       span:nth-child(1) {
         margin-right: 10px;
+      }
+    }
+  }
+}
+
+// PC端样式
+@media screen and (min-width: 769px) {
+  .lock {
+    font-size: 20px; 
+    input {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .main {
+    width: 640px;
+    height: 600px;
+    >div {
+      width: 150px;
+      height: 150px;
+      .dz {
+        font-size: 20px;
+      }
+      .baseName {
+        right: 33px;
+        bottom: 8px;
+        span {
+          font-size: 20px;
+        }
+      }
+    }
+    .star-box {
+      .main-star {
+        font-size: 20px;
+      }
+      .status-box {
+        left: -28px;
+        .status-name {
+          font-size: 18px;
+
+          margin: 2px;
+        }
       }
     }
   }
