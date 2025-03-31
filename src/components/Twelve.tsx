@@ -5,11 +5,7 @@ import Pattern from './pattern';
 import { IMainList, IStarNum } from '../type';
 import { getMainList, setBase, setStatus, setTF, setZW } from '../utils';
 
-export interface TwelveProps {
-  watermark?: string;
-}
-
-export const Twelve: FC<TwelveProps> = ({ watermark = "东派紫微-林学风 制作" }) => {
+export const Twelve: FC = () => {
   const [num, setNum] = useState<IStarNum>(0);
   const [saveList, setSaveList] = useState<IMainList[]>([]);
   const [saveNum, setSaveNum] = useState<IStarNum>(num);
@@ -36,7 +32,7 @@ export const Twelve: FC<TwelveProps> = ({ watermark = "东派紫微-林学风 �
   }, [num, isLock]);
 
   return (
-    <Watermark content={watermark}>
+    <Watermark content="东派紫微-林学风 制作">
       <div className="lx-zw-lock">
         <span className="title">锁定紫微位置</span>
         <input

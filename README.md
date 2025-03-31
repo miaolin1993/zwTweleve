@@ -23,7 +23,7 @@ import { Twelve } from 'react-zw-twelve';
 
 function App() {
   return (
-    <Twelve watermark="" />
+    <Twelve />
   );
 }
 ```
