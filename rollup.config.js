@@ -1,52 +1,40 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
-import * as sass from 'sass';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import sass from 'sass';
 
 export default {
-  input: 'src/index.tsx',
+  input: 'src/index.ts',
   output: [
     {
       file: 'dist/index.js',
       format: 'cjs',
       sourcemap: true,
-      exports: 'named'
     },
     {
       file: 'dist/index.esm.js',
       format: 'esm',
       sourcemap: true,
-      exports: 'named'
-    }
+    },
   ],
   plugins: [
     peerDepsExternal(),
     resolve(),
     commonjs(),
-    typescript({ 
-      tsconfig: './tsconfig.json',
-      declaration: true,
-      declarationDir: 'dist',
-      sourceMap: true
-    }),
+    typescript({ tsconfig: './tsconfig.json' }),
     postcss({
       extensions: ['.css', '.scss'],
-      use: {
-        sass: {
-          implementation: sass,
-          sassOptions: {
-            outputStyle: 'compressed'
-          }
-        }
-      },
-      extract: 'index.css',
+      use: ['sass'],
+      extract: true,
+      modules: false,
       minimize: true,
-      modules: {
-        generateScopedName: '[local]___[hash:base64:5]'
-      }
-    })
+      inject: false,
+      config: {
+        path: './postcss.config.js',
+      },
+    }),
   ],
-  external: ['react', 'react-dom', 'antd']
+  external: ['react', 'react-dom', 'antd'],
 }; 
