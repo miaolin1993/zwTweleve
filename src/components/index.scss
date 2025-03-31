@@ -1,4 +1,4 @@
-.lock {
+.lx-zw-lock {
   display: flex;
   align-items: center;
   margin-bottom: 12px;
@@ -13,7 +13,7 @@
   }
 }
 
-.main {
+.lx-zw-main {
   display: flex;
   flex-wrap: wrap;
   width: 375px;
@@ -129,14 +129,14 @@
 
 // PC端样式
 @media screen and (min-width: 769px) {
-  .lock {
+  .lx-zw-lock {
     font-size: 20px; 
     input {
       width: 20px;
       height: 20px;
     }
   }
-  .main {
+  .lx-zw-main {
     width: 640px;
     height: 600px;
     >div {

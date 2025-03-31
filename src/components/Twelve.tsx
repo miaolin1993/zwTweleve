@@ -37,7 +37,7 @@ export const Twelve: FC<TwelveProps> = ({ watermark = "东派紫微-林学风 �
 
   return (
     <Watermark content={watermark}>
-      <div className="lock">
+      <div className="lx-zw-lock">
         <span className="title">锁定紫微位置</span>
         <input
           type="checkbox"
@@ -47,7 +47,7 @@ export const Twelve: FC<TwelveProps> = ({ watermark = "东派紫微-林学风 �
           value={isLock}
         />
       </div>
-      <div className="main">
+      <div className="lx-zw-main">
         {list &&
           list.map((v) => {
             return (
