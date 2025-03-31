@@ -41,10 +41,9 @@ export default {
           }
         }
       },
-      extract: 'index.css',
-      minimize: true,
+      inject: true,
       modules: false,
-      inject: false
+      minimize: true
     })
   ],
   external: ['react', 'react-dom', 'antd']
