@@ -19,7 +19,7 @@ const Pattern: FC<{ num: IStarNum; saveNum: IStarNum; isLock: number }> = ({
   return (
     <>
       {obj ? (
-        <div>
+        <div className="lx-zw-pattern">
           <Typography>
             <h4>{obj.title}</h4>
           </Typography>

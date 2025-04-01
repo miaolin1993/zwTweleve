@@ -1,4 +1,15 @@
+.lx-zw-pattern {
+  width: 375px;
+  padding: 0 12px;
+  text-align: justify;
+}
 .btn {
   color: #1677ff;
   cursor: pointer;
+}
+
+@media screen and (min-width: 769px) {
+  .lx-zw-pattern {
+    width: 640px;
+  }
 }

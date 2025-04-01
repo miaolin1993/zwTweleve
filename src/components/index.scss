@@ -1,6 +1,18 @@
+.lx-zw-container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column;
+}
 .lx-zw-lock {
   display: flex;
   align-items: center;
+  width: 375px;
+  padding-left: 12px;
   margin-bottom: 12px;
   font-size: 14px;
   input {
@@ -18,6 +30,7 @@
   flex-wrap: wrap;
   width: 375px;
   height: 320px;
+  padding-left: 24px;
   margin-bottom: 12px;
   >div {
     position: relative;
@@ -131,6 +144,7 @@
 @media screen and (min-width: 769px) {
   .lx-zw-lock {
     font-size: 20px; 
+    width: 640px;
     input {
       width: 20px;
       height: 20px;
