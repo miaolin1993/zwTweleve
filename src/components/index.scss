@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   width: 375px;
-  padding-left: 12px;
+  padding-left: 6px;
   margin-bottom: 12px;
   font-size: 14px;
   input {
@@ -29,35 +29,31 @@
   display: flex;
   flex-wrap: wrap;
   width: 375px;
-  height: 320px;
-  padding-left: 24px;
+  padding-left: 6px;
   margin-bottom: 12px;
   >div {
     position: relative;
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
+    padding: 2px;
     border: 1px solid #000;
 
     .dz {
       position: absolute;
       z-index: 999;
-      font-size: 12px;
-      right: 4px;
+      font-size: 13px;
+      right: 2px;
       bottom: 2px;
     }
     .baseName {
       position: absolute;
-      width: 78px;
-      height: 18px;
-      right: 0;
-      bottom: 0;
+      left: 0;
+      bottom: 1px;
+      width: 100%;
       text-align: center;
       border: none;
-      transform: scale(.8);
       span {
-        font-size: 12px;
-        width: 100%;
-        height: 100%;
+        font-size: 10px;
       }
     }
   }
@@ -111,10 +107,10 @@
     border-left: 1px solid transparent;
   }
   .star-box {
+    width: 80px;
     .main-star {
-      margin-top: 4px;
       writing-mode: vertical-lr;
-      font-size: 12px;
+      font-size: 14px;
     }
     
     .main-star:nth-child(1) {
@@ -125,16 +121,11 @@
       color: rgb(4, 14, 103);
     }
     .status-box {
-      position: relative;
-      left: -14px;
-      top: -4px;
-      height: 22px;
       border: none;
-      font-size: 12px;
-      transform: scale(.6);
+      font-size: 10px;
 
       span:nth-child(1) {
-        margin-right: 10px;
+        margin-right: 1px;
       }
     }
   }
@@ -160,23 +151,23 @@
         font-size: 20px;
       }
       .baseName {
-        right: 33px;
-        bottom: 8px;
+        bottom: 2px;
         span {
-          font-size: 20px;
+          font-size: 16px;
         }
       }
     }
     .star-box {
+      width: 150px;
       .main-star {
         font-size: 20px;
       }
       .status-box {
-        left: -28px;
+        span:nth-child(1) {
+          margin-right: 2px;
+        }
         .status-name {
-          font-size: 18px;
-
-          margin: 2px;
+          font-size: 14px;
         }
       }
     }

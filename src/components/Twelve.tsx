@@ -52,7 +52,10 @@ export const Twelve: FC = () => {
                   className={v.class}
                   data-index={v.index}
                   key={`${v.index + v.class + v.title}`}
-                  onClick={() => setNum((v as any).index)}
+                  onClick={() => {
+                    if (v.index > 12) return null
+                    setNum((v as any).index)
+                  }}
                 >
                   {v.mainList.length ? (
                     <div className="star-box">
