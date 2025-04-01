@@ -1,6 +1,6 @@
 {
   "name": "@miaolin777/react-zw-twelve",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "A React component for Twelve Palaces calculation",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
