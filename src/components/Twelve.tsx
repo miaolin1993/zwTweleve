@@ -58,12 +58,14 @@ export const Twelve: FC = () => {
                   }}
                 >
                   {v.mainList.length ? (
-                    <div className="star-box">
-                      {v.mainList.map((l, index) => (
-                        <span className="main-star" key={l + index}>
-                          {l}
-                        </span>
-                      ))}
+                    <div className="star-container">
+                      <div className="star-box">
+                        {v.mainList.map((l, index) => (
+                          <span className="main-star" key={l + index}>
+                            {l}
+                          </span>
+                        ))}
+                      </div>
                       <div className="status-box">
                         {v.statusList.map((l, index) => (
                           <span className="status-name" key={l + index}>

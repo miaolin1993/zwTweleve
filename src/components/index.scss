@@ -106,8 +106,14 @@
     border-top: 1px solid transparent;
     border-left: 1px solid transparent;
   }
-  .star-box {
+  .star-container {
     width: 80px;
+    font-size: 0;
+    .star-box {
+      display: flex;
+      font-size: 0;
+      margin-bottom: 1px;
+    }
     .main-star {
       writing-mode: vertical-lr;
       font-size: 14px;
@@ -157,7 +163,7 @@
         }
       }
     }
-    .star-box {
+    .star-container {
       width: 150px;
       .main-star {
         font-size: 20px;
